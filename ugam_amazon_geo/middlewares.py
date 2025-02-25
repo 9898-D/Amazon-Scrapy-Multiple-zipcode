@@ -81,18 +81,6 @@ class UgamAmazonGeoDownloaderMiddleware:
         request.meta['proxy'] = "https://zproxy.lum-superproxy.io:22225"
         request.headers['Proxy-Authorization'] = basic_auth_header(username, password)
 
-        # 58e54803a3ec8d911696b60bcd5ab666
-        # 4c90a6838c880e80492c51eaac9734d3
-        # 464938048fdd2618762acf8f15aeb62c
-        # 906515bb5e2fc258287a8d77eadca36e
-        # 3f48fb504397b218db65b5dae0ed175f
-        # b2860ce65d5a8848361f31f2ffe0300a
-        # 58e54803a3ec8d911696b60bcd5ab666
-        # 62ad7228b732542539ab0ef9dc03129d
-        # b2860ce65d5a8848361f31f2ffe0300a
-        # ba8d17195ee5fa869a950bf05cd6fc61
-        # 62af64de44353ae3b91ea6ec93234278
-
         return None
 
     def process_response(self, request, response, spider):
