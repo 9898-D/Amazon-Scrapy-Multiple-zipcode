@@ -29,14 +29,8 @@ def get_useragent():
     user_agent_rotator = UserAgent(software_names=software_names, operating_systems=operating_systems, limit=1000)
     return user_agent_rotator.get_random_user_agent()
 
-proxies={"https":"lum-customer-c_11e7173f-zone-zone_us:33p04eaqxtpu@zproxy.lum-superproxy.io:22225",
-            "http":"lum-customer-c_11e7173f-zone-zone_us:33p04eaqxtpu@zproxy.lum-superproxy.io:22225"}
-'2b900e10bfff42a7abdad3a43f18b01e:'
-# proxy_host = "proxy.crawlera.com"
-# proxy_port = "8010"
-# proxy_auth = "295076252cfd4c6785db5845825ed279:"
-# proxies = {"https": "http://{}@{}:{}/".format(proxy_auth, proxy_host, proxy_port),
-#       "http": "http://{}@{}:{}/".format(proxy_auth, proxy_host, proxy_port)}
+proxies={"https":"API_KEY_CREDENTIALS",
+            "http":"API_KEY_CREDENTIALS"}
 
 
 
@@ -159,7 +153,7 @@ class Amazon_Geo(scrapy.Spider):
                             # #                              dont_filter=True,
                             # #                              meta={'row_id': row_id, 'p_url': url, 'zpcode': zipcode})
                             # # else:
-                            # main_req = requests.get(f"http://api.scraperapi.com/?api_key=959b3f5395cc4ae0255e17d7b4075c2e&url={url1}&keep_headers=true&country_code=us",headers=headers)
+                            # main_req = requests.get(f"http://api.scraperapi.com/?api_key="SCRAPER_API_KEY"&url={url1}&keep_headers=true&country_code=us",headers=headers)
                             main_req = requests.get(url1,headers=headers,proxies=proxies,verify=False)
                             # main_req = requests.get(url1,headers=headers)
                             # print(main_req.text)
@@ -207,14 +201,13 @@ class Amazon_Geo(scrapy.Spider):
                                     proxy_host = "proxy.crawlera.com"
                                     proxy_port = "8010"
                                     proxy_auth = "your_apikey:"
-                                    # proxy_auth = "3b43493ce36f48a6977591dabc9de2d9:"
 
                                     crawleraProxies = {
                                         "https": "http://{}@{}:{}/".format(proxy_auth, proxy_host, proxy_port),
                                         "http": "https://{}@{}:{}/".format(proxy_auth, proxy_host, proxy_port)
                                     }
                                     # var_response = requests.get(url=url1, headers=headers, proxies=crawleraProxies,verify=False)
-                                    # var_response = requests.get(f"http://api.scraperapi.com/?api_key=b2860ce65d5a8848361f31f2ffe0300a&url={url1}&keep_headers=true&country_code=us",headers=headers)
+                                    # var_response = requests.get(f"http://api.scraperapi.com/?api_key="API_KEY"&url={url1}&keep_headers=true&country_code=us",headers=headers)
                                     # var_response = requests.get(zen_response,headers=headers)
                                     var_response = requests.get(url1,headers=headers,proxies=proxies,verify=False)
                                     # var_response = requests.get(url1,headers=headers)
